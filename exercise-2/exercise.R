@@ -40,7 +40,7 @@ for(i in 1:100) {
   fitted <- rpart(in_sf ~ ., data = train, method = "class")
   
   # 3. Pass your results to the `AssessFit` function to assess the fit
-  fit <- AssessFit(fitted)
+  fit <- AssessFit(fitted, test)
   
   # 4. Store your assessment in the `basic.fits` vector
   basic.fits <- c(basic.fits, fit)
